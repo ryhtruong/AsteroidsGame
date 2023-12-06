@@ -10,5 +10,3 @@ private int myX, myY;
     ellipse(myX, myY, 2, 2);
   }
 }
-
-
