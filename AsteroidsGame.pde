@@ -33,11 +33,11 @@ public void draw()
     bullet.get(i).show();
 
     }   
-for(int a = 0; a < arr.size(); a++){
-    for(int b = 0; b < bullet.size(); b++){
-      if(dist(bullet.get(b).getX(), bullet.get(b).getY(), arr.get(a).getX(), arr.get(a).getY()) < 30){
-      arr.remove(a);
-      bullet.remove(b);
+for(int i = 0; i < bullet.size(); i++){
+    for(int j = 0; j < arr.size(); j++){
+      if(dist(bullet.get(i).getX(), bullet.get(i).getY(), arr.get(j).getX(), arr.get(j).getY()) < 15){
+      arr.remove(j);
+      bullet.remove(i);
       break;
     }
     }
