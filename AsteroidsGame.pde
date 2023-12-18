@@ -32,12 +32,8 @@ public void draw()
     bullet.get(i).move();
     bullet.get(i).show();
 
-    if((bullet.get(i).getX() > width) || (bullet.get(i).getX() < 0) || (bullet.get(i).getY() > height) || (bullet.get(i).getY() < 0) )
-    {     
-      bullet.remove(i); 
-    }    
-  }
-for(int a = 0; a< arr.size(); a++){
+    }   
+for(int a = 0; a < arr.size(); a++){
     for(int b = 0; b < bullet.size(); b++){
       if(dist(bullet.get(b).getX(), bullet.get(b).getY(), arr.get(a).getX(), arr.get(a).getY()) < 30){
       arr.remove(a);
@@ -62,9 +58,6 @@ if(sPress == true)
 {  
 bob.accelerate(-0.2);
 }
-if (key == ' '){
-  bullet.add(new Bullet(bob));
-}
 }
 public void keyPressed() {
  if (key == 'a')
@@ -88,6 +81,9 @@ public void keyPressed() {
     if (key == 'h') {
       bob.hyperSpace();
   }
+    if (key == ' '){
+      bullet.add(new Bullet(bob));
+}
 }
 private boolean dPress;
 private boolean aPress;
