@@ -63,7 +63,7 @@ if(sPress == true)
 bob.accelerate(-0.2);
 }
 if (key == ' '){
-  bullet.add(new Bullet(arr));
+  bullet.add(new Bullet(bob));
 }
 }
 public void keyPressed() {
