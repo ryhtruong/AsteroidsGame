@@ -1,5 +1,5 @@
 class Bullet extends Floater{
-  public Bullet(SpaceShip ship){
+  public Bullet(SpaceShip arr){
     myCenterX = ship.getX();
     myCenterY = ship.getY();
     myPointDirection = ship.getPointDirection();
