@@ -7,10 +7,8 @@ class Bullet extends Floater{
     myDirectionY = 10* Math.sin(myPointDirection*(Math.PI/180)) + bob.getDirectionY();
   }
   public void show(){
-    noStroke();
-    fill(#ffffb3);
-    ellipse((float)(myCenterX+10*Math.cos(myPointDirection*(Math.PI/180))),(float)(myCenterY+10*Math.sin(myPointDirection*(Math.PI/180))),5,5);
-    
+    fill(142,154,255);
+  ellipse((float)myCenterX, (float)myCenterY, 5, 5);
   }
   public void move()  
   {      
