@@ -62,6 +62,9 @@ if(sPress == true)
 {  
 bob.accelerate(-0.2);
 }
+if (key == ' '){
+  bullet.add(new Bullet(arr));
+}
 }
 public void keyPressed() {
  if (key == 'a')
