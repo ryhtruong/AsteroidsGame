@@ -1,10 +1,10 @@
 class Bullet extends Floater{
   public Bullet(SpaceShip arr){
-    myCenterX = ship.getX();
-    myCenterY = ship.getY();
-    myPointDirection = ship.getPointDirection();
-    myDirectionX = 10* Math.cos(myPointDirection*(Math.PI/180)) + ship.getDirectionX();
-    myDirectionY = 10* Math.sin(myPointDirection*(Math.PI/180)) + ship.getDirectionY();
+    myCenterX = arr.getX();
+    myCenterY = arr.getY();
+    myPointDirection = arr.getPointDirection();
+    myDirectionX = 10* Math.cos(myPointDirection*(Math.PI/180)) + arr.getDirectionX();
+    myDirectionY = 10* Math.sin(myPointDirection*(Math.PI/180)) + arr.getDirectionY();
   }
   public void show(){
     noStroke();
