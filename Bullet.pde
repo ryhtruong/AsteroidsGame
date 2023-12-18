@@ -2,9 +2,9 @@ class Bullet extends Floater{
   public Bullet(SpaceShip bob){
     myCenterX = bob.getX();
     myCenterY = bob.getY();
+    myXspeed = bob.getXspeed();
+    myYspeed = bob.getYspeed();
     myPointDirection = bob.getPointDirection();
-    myDirectionX = 10* Math.cos(myPointDirection*(Math.PI/180)) + bob.getDirectionX();
-    myDirectionY = 10* Math.sin(myPointDirection*(Math.PI/180)) + bob.getDirectionY();
   }
   public void show(){
     fill(142,154,255);
