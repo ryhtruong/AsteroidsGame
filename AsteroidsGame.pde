@@ -35,7 +35,7 @@ public void draw()
     }   
 for(int i = 0; i < bullet.size(); i++){
     for(int j = 0; j < arr.size(); j++){
-      if(dist(bullet.get(i).getX(), bullet.get(i).getY(), arr.get(j).getX(), arr.get(j).getY()) < 15){
+      if(dist((float)bullet.get(i).getX(), (float)bullet.get(i).getY(), (float)arr.get(j).getX(), (float)arr.get(j).getY()) < 15){
       arr.remove(j);
       bullet.remove(i);
       break;
