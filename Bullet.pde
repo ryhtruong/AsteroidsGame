@@ -1,23 +1,22 @@
-class Bullet extends Floater
-{
+class Bullet extends Floater{
   public Bullet(Spaceship bob){
+    corners = 5;
+    xCorners = new int[]{1, 3, 1, -2, -2};
+    yCorners = new int[]{-1, 0, 1, 1, -1};
     myCenterX = bob.getX();
     myCenterY = bob.getY();
     myXspeed = bob.getXspeed();
     myYspeed = bob.getYspeed();
-    accelerate(100);
     myPointDirection = bob.getPointDirection();
+    myColor = color(200);
+    accelerate(6.0);
   }
-  public void show(){
-    fill(0);
-    ellipse((float)myCenterX, (float)myCenterY, 10, 10);
+  
+  public double getX(){
+    return myCenterX;
   }
-  public void move(){
-    double dRadians = myPointDirection*(Math.PI/180);        
-    myXspeed = ((10) * Math.cos(dRadians));    
-    myYspeed = ((10) * Math.sin(dRadians));
-    myCenterX += myXspeed;    
-    myCenterY += myYspeed;
-       
+  
+  public double getY(){
+    return myCenterY;
   }
 }
