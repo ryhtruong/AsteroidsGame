@@ -24,9 +24,11 @@ public void draw()
   for (int i = 0; i < arr.size(); i++) {
     arr.get(i).show();
     arr.get(i).move();
-    float d = dist((float)bob.getX(), (float)bob.getY(), (float)arr.get(i).getX(), (float)arr.get(i).getY());
-    if (d < 20)
+    float d = dist((float)bob.getX(), (float)bob.getY(), (float)arr.get(i).getCenterX(), (float)arr.get(i).getCenterY());
+    if (d < 20){
       arr.remove(i);
+      bullet.remove(i)
+}
   }
  for(int i = 0; i < bullet.size(); i++){
     bullet.get(i).move();
@@ -35,7 +37,7 @@ public void draw()
     }   
 for(int i = 0; i < bullet.size(); i++){
     for(int j = 0; j < arr.size(); j++){
-      if(dist((float)bullet.get(i).getX(), (float)bullet.get(i).getY(), (float)arr.get(j).getX(), (float)arr.get(j).getY()) < 15){
+      if(dist((float)bullet.get(i).getX(), (float)bullet.get(i).getY(), (float)arr.get(j).getCenterX(), (float)arr.get(j).getCenterY()) < 15){
       arr.remove(j);
       bullet.remove(i);
       break;
